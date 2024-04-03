@@ -28,22 +28,13 @@ namespace registr
 
         private void OKBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (CodeTB.Text.Trim() == String.Empty)
-            {
-                CodeTB.Background = Brushes.LightPink;
-                MessageBox.Show("Заполните поле!");
-                CodeTB.Background = Brushes.White;
-            }
-
             if (Convert.ToInt32(CodeTB.Text) == _code)
             {
-                CodeTB.Background = Brushes.LightGreen;
-                MessageBox.Show("Email подтвержден!");
+                MessageBox.Show("Почта подтверждена!");
                 this.Close();
             }
             else
             {
-                CodeTB.Background = Brushes.LightPink;
                 MessageBox.Show("Неверный код!");
                 CodeTB.Clear();
             }

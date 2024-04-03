@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:registr"
         mc:Ignorable="d"
-        Title="Window1" Height="780" Width="1520">
+        WindowStartupLocation="CenterScreen"
+        Title="Window1" Height="680" Width="1320">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="19*"/>
             <ColumnDefinition Width="461*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="574" Margin="75,91,0,0" VerticalAlignment="Top" Width="1200" Fill="#CCFFFFFF" RadiusY="30" RadiusX="30" Grid.Column="1"/>
-        <Label Content="CONFIRMATION" HorizontalAlignment="Left" Height="104" Margin="151,140,0,0" VerticalAlignment="Top" Width="548" FontSize="72" Grid.Column="1"/>
-        <TextBox x:Name="CodeTB" HorizontalAlignment="Left" Height="81" Margin="151,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1048" FontSize="26" FontFamily="Rockwell" VerticalContentAlignment="Center" Padding="15,0,0,0" BorderBrush="#FF6382B3" Foreground="#FF000C58" Background="White" Grid.Column="1"/>
-        <Label Content="Code:" HorizontalAlignment="Left" Height="56" Margin="151,291,0,0" VerticalAlignment="Top" Width="316" FontSize="36" Grid.Column="1"/>
-        <Button x:Name="OKBtn" Content="OK" HorizontalAlignment="Left" Height="95" Margin="151,491,0,0" VerticalAlignment="Top" Width="683" FontSize="36" Foreground="White" Background="Red" BorderBrush="{x:Null}" Cursor="Hand" BorderThickness="0,0,0,0" Click="OKBtn_Click" Grid.Column="1"/>
-        <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Height="95" Margin="896,491,0,0" VerticalAlignment="Top" Width="303" FontSize="36" Click="CloseBtn_Click" Foreground="White" Background="Blue" BorderBrush="{x:Null}" Cursor="Hand" BorderThickness="0,0,0,0" Grid.Column="1"/>
-
+        <Rectangle HorizontalAlignment="Left" Height="574" Margin="47,63,0,0" VerticalAlignment="Top" Width="1200" Fill="#CCFFFFFF" RadiusY="30" RadiusX="30" Grid.ColumnSpan="2"/>
+        <Label Content="ПОДТВЕРЖДЕНИЕ РЕГИСТРАЦИИ" HorizontalAlignment="Left" Height="104" Margin="71,112,0,0" VerticalAlignment="Top" Width="1074" FontSize="68" Grid.Column="1"/>
+        <TextBox x:Name="CodeTB" HorizontalAlignment="Left" Height="81" Margin="71,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1048" FontSize="26" FontFamily="Rockwell" VerticalContentAlignment="Center" Padding="15,0,0,0" BorderBrush="#FF6382B3" Foreground="#FF000C58" Background="White" Grid.Column="1"/>
+        <Label Content="Введите код:" HorizontalAlignment="Left" Height="56" Margin="71,263,0,0" VerticalAlignment="Top" Width="316" FontSize="36" Grid.Column="1"/>
+        <Button x:Name="OKBtn" Content="OK" HorizontalAlignment="Left" Height="95" Margin="71,463,0,0" VerticalAlignment="Top" Width="683" FontSize="36" Foreground="White" Background="Red" BorderBrush="{x:Null}" Cursor="Hand" BorderThickness="0,0,0,0" Click="OKBtn_Click" Grid.Column="1"/>
+        <Button x:Name="CloseBtn" Content="Закрыть" HorizontalAlignment="Left" Height="95" Margin="816,463,0,0" VerticalAlignment="Top" Width="303" FontSize="36" Click="CloseBtn_Click" Foreground="White" Background="Blue" BorderBrush="{x:Null}" Cursor="Hand" BorderThickness="0,0,0,0" Grid.Column="1"/>
     </Grid>
 </Window>

@@ -44,7 +44,7 @@ namespace registr
                 using (SmtpClient smtpClient = new SmtpClient())
                 {
                     message.Subject = "Добро пожаловать!";
-                    message.Body = $"<h1>Код подтверждения:<br>{_code}</h1><br><h1>Данные для входа в аккаунт</h1><p>Почта: {_email}<br>Пароль: {_password}</p>";
+                    message.Body = $"<h1>Код подтверждения:<br>{_code}</h1>";
                     message.IsBodyHtml = true;
 
                     smtpClient.Host = "smtp.gmail.com";
@@ -62,41 +62,12 @@ namespace registr
 
         private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (EmailTB.Text.Trim() == String.Empty || PasswordTB.Password.Trim() == String.Empty)
-            {
-                if (EmailTB.Text.Trim() == String.Empty)
-                    EmailTB.Background = Brushes.LightPink;
-                if (PasswordTB.Password.Trim() == String.Empty)
-                    PasswordTB.Background = Brushes.LightPink;
-                MessageBox.Show("Все поля должны быть заполнены!");
-                PasswordTB.Background = Brushes.White;
-                EmailTB.Background = Brushes.White;
-                return;
-            }
-
-            if (!EmailTB.Text.Contains("@"))
-            {
-                EmailTB.Background = Brushes.LightPink;
-                MessageBox.Show("Неверный формат почты!");
-                EmailTB.Clear();
-                EmailTB.Background = Brushes.White;
-                return;
-            }
-
-            EmailTB.Background = Brushes.LightGreen;
-            PasswordTB.Background = Brushes.LightGreen;
-
             _email = EmailTB.Text;
             _password = PasswordTB.Password;
             SendMessage();
-
-            MessageBox.Show($"Данные для входа отправлены на почту {EmailTB.Text}");
-
+            MessageBox.Show($"Код подтвреждения отправлен на почту {EmailTB.Text}");
             EmailTB.Clear();
             PasswordTB.Clear();
-            PasswordTB.Background = Brushes.White;
-            EmailTB.Background = Brushes.White;
-
             new Window1(_code).ShowDialog();
         }
 
@@ -108,11 +79,6 @@ namespace registr
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
